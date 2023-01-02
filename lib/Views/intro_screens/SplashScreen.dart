@@ -5,6 +5,7 @@ import 'package:connect_vms/AppConstants/Constants.dart';
 import 'package:connect_vms/GetxController/ThemeController.dart';
 import 'package:connect_vms/Utils/AppUtils.dart';
 import 'package:connect_vms/Views/auth_screens/LoginScreen.dart';
+import 'package:connect_vms/services/AuthApis.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -39,6 +40,7 @@ class _SplashScreen extends State<SplashScreen>{
           Get.offAll(() => HomeScreen(userModel.gateType??"hybrid"));
         }
       }else {
+        await
         Get.offAll(() => LoginScreen());
       }
     });
